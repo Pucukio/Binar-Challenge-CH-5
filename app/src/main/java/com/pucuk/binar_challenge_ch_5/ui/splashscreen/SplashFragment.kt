@@ -10,10 +10,6 @@ import com.pucuk.binar_challenge_ch_5.R
 
 class SplashFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = SplashFragment()
-    }
-
     private lateinit var viewModel: SplashViewModel
 
     override fun onCreateView(
@@ -21,12 +17,6 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_splash, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }

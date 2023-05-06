@@ -1,4 +1,4 @@
-package com.pucuk.binar_challenge_ch_5.ui.registerscreen
+package com.pucuk.binar_challenge_ch_5.ui.detailscreen
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,15 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import com.pucuk.binar_challenge_ch_5.R
 
-class RegisterFragment : Fragment() {
+class DetailFragment : Fragment() {
 
-    private lateinit var viewModel: RegisterViewModel
+    private lateinit var viewModel: DetailViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_register, container, false)
+        return inflater.inflate(R.layout.fragment_detail, container, false)
     }
 
 }
