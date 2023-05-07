@@ -20,14 +20,14 @@
 
     <string name="choose_language">Choose Language</string>
     <string name="english">English</string>
-    <string name="indonesian">Indonesia</string>
+    <string name="indonesian">Indonesian</string>
 
     <string name="title">Title</string>
-    <string name="email">Email</string>
+    <string name="email" translatable="false">Email</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="submit">Submit</string>
+    <string name="submit" translatable="false">Submit</string>
 
     <string name="enter_full_name">Enter Full Name</string>
     <string name="enter_birth_date">Enter Birth Date</string>
