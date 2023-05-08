@@ -10,6 +10,8 @@
     <string name="login">Masuk</string>
     <string name="sign_up">Daftar</string>
     <string name="sign_in">Masuk</string>
+    <string name="profile">Data Diri</string>
+    <string name="search">Cari</string>
     <string name="hello">Halo</string>
     <string name="home">Linimasa</string>
     <string name="welcome">Selamat Datang</string>
@@ -20,6 +22,7 @@
     <string name="english">Inggris</string>
     <string name="indonesian">Indonesia</string>
     <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
     <string name="username">Nama Pengguna</string>
     <string name="password">Kata Sandi</string>
     <string name="confirm_password">Konfirmasi Kata Sandi</string>

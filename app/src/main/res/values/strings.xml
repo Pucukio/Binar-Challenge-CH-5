@@ -9,6 +9,8 @@
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
 
     <string name="hello">Hello</string>
     <string name="home">Home</string>
@@ -23,6 +25,7 @@
     <string name="indonesian">Indonesian</string>
 
     <string name="title">Title</string>
+    <string name="description">Description</string>
     <string name="email" translatable="false">Email</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -51,5 +54,7 @@
         <item>November</item>
         <item>December</item>
     </string-array>
+
+
 
 </resources>
