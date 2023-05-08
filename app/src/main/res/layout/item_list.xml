@@ -36,6 +36,22 @@
                 card_view:layout_constraintStart_toEndOf="@id/iv_img"
                 card_view:layout_constraintTop_toTopOf="parent"/>
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="@string/date"
+                    android:textSize="15sp"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_description"
                 android:layout_width="wrap_content"

@@ -7,48 +7,155 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.detailscreen.DetailFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_collapseMode="pin"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_scrollFlags="scroll|enterAlways"
-        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Dark">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_back"/>
-    </androidx.appcompat.widget.Toolbar>
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_detail"
-        android:layout_width="match_parent"
-        android:layout_height="275dp"
-        android:src="@drawable/ic_login"
+        android:layout_width="175dp"
+        android:layout_height="260dp"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:src="@drawable/sample"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_about"
+        android:id="@+id/tv_Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Evan Al Mighty"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_detail"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="2019"
+        app:layout_constraintStart_toEndOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_Title"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_genres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="25dp"
-        android:text="@string/about_film"
-        android:textSize="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Drama, Thriller, Jumpscare"
+        app:layout_constraintStart_toEndOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="75 Min"
+        app:layout_constraintStart_toEndOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_genres"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="English"
+        app:layout_constraintStart_toEndOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_duration"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_Writer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Writer"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_detail"
         app:layout_constraintTop_toBottomOf="@id/iv_detail"/>
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_detail"
+        android:id="@+id/tv_name_writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Ben Kenobi"
+        app:layout_constraintStart_toStartOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_Writer"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_Actor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Actors"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_name_writer"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_writer"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_name_actor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Luke Skywalker, Anakin Skywalker"
+        app:layout_constraintStart_toStartOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_Actor"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Description"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_name_writer"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_actor"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_name_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        app:layout_constraintStart_toStartOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/teal"
+        android:text="@string/back"
+        android:textColor="@color/cold"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_about"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

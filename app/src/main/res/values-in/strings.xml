@@ -23,6 +23,7 @@
     <string name="indonesian">Indonesia</string>
     <string name="title">Judul</string>
     <string name="description">Deskripsi</string>
+    <string name="date">Tanggal</string>
     <string name="username">Nama Pengguna</string>
     <string name="password">Kata Sandi</string>
     <string name="confirm_password">Konfirmasi Kata Sandi</string>
