@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:padding="10dp"
+    android:background="@drawable/background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.profilescreen.ProfileFragment">
-
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,17 +24,6 @@
             android:src="@drawable/ic_arrow_back"/>
     </androidx.appcompat.widget.Toolbar>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile"
-        android:textColor="@color/sea"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_profile"
         android:layout_width="150dp"
@@ -42,7 +31,7 @@
         android:src="@drawable/ic_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_username"
