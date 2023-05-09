@@ -15,9 +15,9 @@ import com.pucuk.binar_challenge_ch_5.ui.splashscreen.SplashViewModel
 
 class ProfileFragment : Fragment() {
 
-    private lateinit var viewModel: ProfileViewModel
+    private  val viewModel: ProfileViewModel by viewModels()
     lateinit var _binding: FragmentProfileBinding
-    val splashVM: ProfileViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

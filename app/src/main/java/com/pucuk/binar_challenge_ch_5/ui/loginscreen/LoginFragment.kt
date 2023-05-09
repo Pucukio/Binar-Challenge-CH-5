@@ -15,9 +15,9 @@ import com.pucuk.binar_challenge_ch_5.ui.splashscreen.SplashViewModel
 
 class LoginFragment : Fragment() {
 
-    private lateinit var viewModel: LoginViewModel
+    private  val viewModel: LoginViewModel by viewModels()
     lateinit var _binding: FragmentLoginBinding
-    val splashVM: LoginViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

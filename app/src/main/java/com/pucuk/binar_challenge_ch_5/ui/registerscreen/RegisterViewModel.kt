@@ -1,7 +1,21 @@
 package com.pucuk.binar_challenge_ch_5.ui.registerscreen
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class RegisterViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+    private val _register = MutableLiveData<String>()
+    val register: LiveData<String> = _register
+
+    fun registerFirebase(_email: String, _password: String) =
+        Firebase.auth.createUserWithEmailAndPassword(_email, _password).addOnCompleteListener {
+            if (it.isSuccessful) {
+                _register.postValue("Register Success!")
+            } else {
+                _register.postValue(it.exception.toString())
+            }
+        }
 }

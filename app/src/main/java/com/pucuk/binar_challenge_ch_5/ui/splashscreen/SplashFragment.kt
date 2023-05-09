@@ -15,9 +15,8 @@ import com.pucuk.binar_challenge_ch_5.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
 
-    private lateinit var viewModel: SplashViewModel
+    private  val viewModel: SplashViewModel by viewModels()
     lateinit var _binding: FragmentSplashBinding
-    val splashVM: SplashViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +29,7 @@ class SplashFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         Handler(Looper.getMainLooper()).postDelayed({
-            splashVM.currentUser(findNavController())
+            viewModel.currentUser(findNavController())
         }, 3000)
     }
 

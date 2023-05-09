@@ -15,9 +15,9 @@ import com.pucuk.binar_challenge_ch_5.ui.splashscreen.SplashViewModel
 
 class DetailFragment : Fragment() {
 
-    private lateinit var viewModel: DetailViewModel
+    private  val viewModel: DetailViewModel by viewModels()
     lateinit var _binding: FragmentDetailBinding
-    val splashVM: DetailViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
