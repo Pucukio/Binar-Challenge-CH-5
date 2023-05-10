@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.pucuk.binar_challenge_ch_5.R
 import com.pucuk.binar_challenge_ch_5.databinding.FragmentHomeBinding
 import com.pucuk.binar_challenge_ch_5.databinding.FragmentLoginBinding
@@ -50,6 +52,7 @@ class HomeFragment : Fragment() {
                     true
                 }
                 R.id.logout -> {
+                    Firebase.auth.signOut()
                     findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
                     true
                 }
