@@ -32,18 +32,21 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        _binding?.tvLogin?.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
         _binding?.btnRegister?.setOnClickListener {
             val email = _binding?.etEmail?.text.toString()
             val password = _binding?.etPassword?.text.toString()
 
             if (email.isEmpty()) {
-                _binding?.etEmail?.error = "Email harus diisi"
+                _binding?.etEmail?.error = "Email must not be empty"
                 _binding?.etEmail?.requestFocus()
             } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                _binding?.etEmail?.error = "Email tidak valid"
+                _binding?.etEmail?.error = "Invalid email format"
                 _binding?.etEmail?.requestFocus()
             } else if (password.isEmpty()) {
-                _binding?.etPassword?.error = "Password harus diisi"
+                _binding?.etPassword?.error = "Password must not be empty"
                 _binding?.etPassword?.requestFocus()
             } else {
                 viewModel.registerFirebase(email, password)
@@ -51,7 +54,7 @@ class RegisterFragment : Fragment() {
         }
 
         viewModel.register.observe(viewLifecycleOwner) { result ->
-            if (result == "Register Success!") {
+            if (result == "Registration successful!") {
                 Toast.makeText(requireContext(), result, Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             } else {

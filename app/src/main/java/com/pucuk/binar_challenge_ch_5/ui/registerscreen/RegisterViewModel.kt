@@ -13,7 +13,7 @@ class RegisterViewModel : ViewModel() {
     fun registerFirebase(_email: String, _password: String) =
         Firebase.auth.createUserWithEmailAndPassword(_email, _password).addOnCompleteListener {
             if (it.isSuccessful) {
-                _register.postValue("Register Success!")
+                _register.postValue("Registration Successful!")
             } else {
                 _register.postValue(it.exception.toString())
             }
