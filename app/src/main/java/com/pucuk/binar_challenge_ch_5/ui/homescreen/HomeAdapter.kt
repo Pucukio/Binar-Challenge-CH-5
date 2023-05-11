@@ -1,19 +1,29 @@
 package com.pucuk.binar_challenge_ch_5.ui.homescreen
 
+import android.os.Bundle
 import android.view.LayoutInflater
+import com.pucuk.binar_challenge_ch_5.data.model.Result
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.pucuk.binar_challenge_ch_5.R
 import com.pucuk.binar_challenge_ch_5.data.model.ResponseFilm
 import com.pucuk.binar_challenge_ch_5.databinding.ItemListBinding
 
-class HomeAdapter(private val listResult: List<ResponseFilm>) : RecyclerView.Adapter<HomeAdapter.ViewHolder>()  {
+class HomeAdapter(private val listResult: List<Result>) : RecyclerView.Adapter<HomeAdapter.ViewHolder>()  {
     class ViewHolder(private val _binding: ItemListBinding) : RecyclerView.ViewHolder(_binding.root) {
-        fun bind(filmItem: ResponseFilm) {
+        fun bind(filmItem: Result) {
             val imageUrl = "https://image.tmdb.org/t/p/w500"
             _binding.tvTitle.text = filmItem.title
             _binding.tvDate.text = filmItem.releaseDate
             Glide.with(itemView).load(imageUrl + filmItem.posterPath).into(_binding.ivImg)
+            _binding.root.setOnClickListener {
+                it.findNavController()
+                    .navigate(
+                        R.id.action_homeFragment_to_detailFragment,
+                        Bundle().apply { putInt("MOVIE_ID", filmItem.id) })
+            }
         }
     }
 
