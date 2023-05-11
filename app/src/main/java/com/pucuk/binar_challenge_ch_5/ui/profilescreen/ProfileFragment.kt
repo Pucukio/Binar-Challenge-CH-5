@@ -36,10 +36,10 @@ class ProfileFragment : Fragment() {
 
         binding.apply {
             btnUpdate.setOnClickListener {
-                val email = _binding.etEmail.text.toString().trim()
-                val namaLengkap = _binding.etNamaLengkap.text.toString().trim()
-                val tanggalLahir = _binding.etTanggalLahir.text.toString().trim()
-                viewModel.updateEmail(email)
+//                val email = _binding.etEmail.text.toString().trim()
+//                val namaLengkap = _binding.etNamaLengkap.text.toString().trim()
+//                val tanggalLahir = _binding.etTanggalLahir.text.toString().trim()
+//                viewModel.updateEmail(email)
                 viewModel.update.observe(viewLifecycleOwner) {
                     Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.profileFragment)
