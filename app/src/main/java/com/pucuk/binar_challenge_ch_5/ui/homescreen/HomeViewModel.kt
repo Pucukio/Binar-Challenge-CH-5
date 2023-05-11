@@ -13,6 +13,6 @@ class HomeViewModel : ViewModel() {
     val movie: LiveData<ResponseFilm> = _movie
 
     fun getFilm() = viewModelScope.launch {
-        _movie.postValue(RetrofitClient.instance.getAllFilmPopular())
+        _movie.postValue(RetrofitClient.instance.getDetailFilm())
     }
 }
