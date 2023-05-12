@@ -69,16 +69,6 @@
         app:layout_constraintStart_toEndOf="@id/iv_detail"
         app:layout_constraintTop_toBottomOf="@id/tv_date"/>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_duration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="75 Min"
-        app:layout_constraintStart_toEndOf="@id/iv_detail"
-        app:layout_constraintTop_toBottomOf="@id/tv_genres"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_language"
@@ -89,54 +79,7 @@
         android:layout_marginEnd="32dp"
         android:text="English"
         app:layout_constraintStart_toEndOf="@id/iv_detail"
-        app:layout_constraintTop_toBottomOf="@id/tv_duration"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_Writer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Writer"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/iv_detail"
-        app:layout_constraintTop_toBottomOf="@id/iv_detail"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_name_writer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Ben Kenobi"
-        app:layout_constraintStart_toStartOf="@id/iv_detail"
-        app:layout_constraintTop_toBottomOf="@id/tv_Writer"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_Actor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Actors"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/tv_name_writer"
-        app:layout_constraintTop_toBottomOf="@id/tv_name_writer"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_name_actor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="Luke Skywalker, Anakin Skywalker"
-        app:layout_constraintStart_toStartOf="@id/iv_detail"
-        app:layout_constraintTop_toBottomOf="@id/tv_Actor"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_genres"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_description"
@@ -144,18 +87,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:paddingStart="16dp"
         android:text="Description"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/tv_name_writer"
-        app:layout_constraintTop_toBottomOf="@id/tv_name_actor"/>
+        app:layout_constraintStart_toStartOf="@id/iv_detail"
+        app:layout_constraintTop_toBottomOf="@id/iv_detail"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_name_description"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:maxLines="10"
+        android:ellipsize="end"
         android:layout_marginEnd="32dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         app:layout_constraintStart_toStartOf="@id/iv_detail"
@@ -169,6 +115,7 @@
         android:background="@color/teal"
         android:text="@string/back"
         android:textColor="@color/cold"
+
         android:textStyle="bold"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"

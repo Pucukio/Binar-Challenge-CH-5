@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.pucuk.binar_challenge_ch_5.R
 import com.pucuk.binar_challenge_ch_5.databinding.FragmentProfileBinding
 import com.pucuk.binar_challenge_ch_5.databinding.FragmentRegisterBinding
@@ -36,14 +38,21 @@ class ProfileFragment : Fragment() {
 
         binding.apply {
             btnUpdate.setOnClickListener {
-//                val email = _binding.etEmail.text.toString().trim()
-//                val namaLengkap = _binding.etNamaLengkap.text.toString().trim()
-//                val tanggalLahir = _binding.etTanggalLahir.text.toString().trim()
-//                viewModel.updateEmail(email)
+                val email = _binding?.etFullname?.text.toString().trim()
+                val namaLengkap = _binding?.etFullname?.text.toString().trim()
+                val tanggalLahir = _binding?.etBirthdate?.text.toString().trim()
+                viewModel.updateEmail(email)
                 viewModel.update.observe(viewLifecycleOwner) {
                     Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.profileFragment)
                 }
+            }
+            btnLogout.setOnClickListener {
+                Firebase.auth.signOut()
+                findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
+            }
+            backButton.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_homeFragment)
             }
         }
     }

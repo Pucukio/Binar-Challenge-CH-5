@@ -34,4 +34,23 @@
     <string name="about_film">Tentang Film</string>
     <string name="select_date">Pilih Tanggal</string>
     <string name="not_registered_yet">Belum Daftar?</string>
+    <string name="type_your_username">Masukkan Username</string>
+    <string name="type_your_email">Masukkan Email</string>
+    <string name="type_your_password">Masukkan Kata Sandi</string>
+    <string name="type_your_confirmpassword">Masukkan Ulang Kata Sandi</string>
+
+    <string-array name="month_names">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
 </resources>

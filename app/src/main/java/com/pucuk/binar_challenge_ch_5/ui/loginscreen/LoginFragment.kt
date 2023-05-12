@@ -1,7 +1,9 @@
 package com.pucuk.binar_challenge_ch_5.ui.loginscreen
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,6 +42,9 @@ class LoginFragment : Fragment() {
         }
         _binding.tvRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+        _binding.tvLanguage.setOnClickListener {
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
         }
         _binding.btnLogin.setOnClickListener {
             val email = _binding.etEmail.text.toString()
