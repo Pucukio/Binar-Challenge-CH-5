@@ -41,7 +41,7 @@
 
     <string name="enter_full_name">Enter Full Name</string>
     <string name="enter_full_usernmae">Enter Username</string>
-    <string name="enter_birth_date">Enter Birth Date</string>
+    <string name="enter_birth_date">Enter Birth Date (DD/MM/YYYY)</string>
     <string name="enter_address">Enter Address</string>
     <string name="update_profile">Update Profile</string>
 

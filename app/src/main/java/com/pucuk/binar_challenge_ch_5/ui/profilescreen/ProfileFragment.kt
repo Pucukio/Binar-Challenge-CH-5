@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.ktx.Firebase
 import com.pucuk.binar_challenge_ch_5.R
 import com.pucuk.binar_challenge_ch_5.databinding.FragmentProfileBinding
@@ -44,10 +45,16 @@ class ProfileFragment : Fragment() {
         binding.apply {
             btnUpdate.setOnClickListener {
                 val email = _binding?.etEmail?.text.toString().trim()
-                viewModel.updateEmail(email)
-                viewModel.update.observe(viewLifecycleOwner) {
-                    Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.profileFragment)
+                val username = _binding?.etUsername?.text.toString().trim()
+                if (username.length > 12) {
+                    FirebaseCrashlytics.getInstance().log("Exploiting Username")
+                    throw RuntimeException("Application Crashed due to Exploiting Username")
+                } else {
+                    viewModel.updateEmail(email)
+                    viewModel.update.observe(viewLifecycleOwner) {
+                        Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.profileFragment)
+                    }
                 }
             }
             btnLogout.setOnClickListener {
