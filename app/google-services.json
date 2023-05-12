@@ -7,18 +7,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:463616004636:android:223174bdabf46c6147c5d9",
+        "mobilesdk_app_id": "1:463616004636:android:f143826624dfe22c47c5d9",
         "android_client_info": {
           "package_name": "com.pucuk.binar_challenge_ch_5"
         }
       },
       "oauth_client": [
         {
-          "client_id": "463616004636-khs2nk0du06vs0a1inoaj0ui58dqcpur.apps.googleusercontent.com",
+          "client_id": "463616004636-an173puqg8gpfefqc9shne848gmpki2s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.pucuk.binar_challenge_ch_5",
-            "certificate_hash": "ddbbf5b23df6e26f3ed937886bf3b8635a009672"
+            "certificate_hash": "928f0f565a9f775e886804cb803872d5d7dbe32e"
           }
         },
         {

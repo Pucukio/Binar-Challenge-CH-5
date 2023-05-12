@@ -35,12 +35,15 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.session()
+        viewModel.user.observe(viewLifecycleOwner) {
+            binding.apply {
+                etEmail.setText(it?.email.toString())
+            }
+        }
 
         binding.apply {
             btnUpdate.setOnClickListener {
-                val email = _binding?.etFullname?.text.toString().trim()
-                val namaLengkap = _binding?.etFullname?.text.toString().trim()
-                val tanggalLahir = _binding?.etBirthdate?.text.toString().trim()
+                val email = _binding?.etEmail?.text.toString().trim()
                 viewModel.updateEmail(email)
                 viewModel.update.observe(viewLifecycleOwner) {
                     Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()

@@ -28,6 +28,7 @@
     <string name="password">Kata Sandi</string>
     <string name="confirm_password">Konfirmasi Kata Sandi</string>
     <string name="enter_full_name">Masukkan Nama Lengkap</string>
+    <string name="enter_full_usernmae">Masukkan Nama Pengguna</string>
     <string name="enter_birth_date">Masukkan Tanggal Lahir</string>
     <string name="enter_address">Masukkan Alamat</string>
     <string name="update_profile">Ubah Profil</string>
@@ -35,6 +36,7 @@
     <string name="select_date">Pilih Tanggal</string>
     <string name="not_registered_yet">Belum Daftar?</string>
     <string name="type_your_username">Masukkan Username</string>
+    <string name="type_your_fullname">Masukkan Nama Lengkap</string>
     <string name="type_your_email">Masukkan Email</string>
     <string name="type_your_password">Masukkan Kata Sandi</string>
     <string name="type_your_confirmpassword">Masukkan Ulang Kata Sandi</string>

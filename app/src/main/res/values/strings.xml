@@ -21,6 +21,7 @@
     <string name="not_registered_yet">Not Registered Yet?</string>
 
     <string name="type_your_username">Type your Username</string>
+    <string name="type_your_fullname">Type your Full Name</string>
     <string name="type_your_email">Type your Email</string>
     <string name="type_your_password">Type your Password</string>
     <string name="type_your_confirmpassword">Retype your Password</string>
@@ -39,6 +40,7 @@
     <string name="submit" translatable="false">Submit</string>
 
     <string name="enter_full_name">Enter Full Name</string>
+    <string name="enter_full_usernmae">Enter Username</string>
     <string name="enter_birth_date">Enter Birth Date</string>
     <string name="enter_address">Enter Address</string>
     <string name="update_profile">Update Profile</string>
